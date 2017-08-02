@@ -1,0 +1,38 @@
+<div class="well">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Login to your account</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <form (ngSubmit)="login(f)" #f="ngForm" class="container-fluid">
+            <div class="input-group signup">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input class="form-control" type="text" placeholder="enter email address" id="email" 
+                [(ngModel)]="email" name="email" required #em="ngModel">         
+            </div>
+                <br>
+            <div class="input-group signup">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input class="form-control" type="password" placeholder="Enter Password" id="password" 
+                [(ngModel)]="password" name="password" required #pwd="ngModel" minlength="1">
+            </div>
+                <!--display error for invalid password-->
+            <div class="alert alert-danger" *ngIf="authService.loginError()">
+                {{ authService.errorMSG }}
+            </div>
+                <br>
+            <button class="btn btn-info" type="submit" [disabled]="!f.valid">Submit</button>
+        </form>
+    </div>
+        <hr>
+
+    <div class="row">
+        <div class="pull-right">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-default" (click)="cancel()">Back to the Main Site</button>
+            </div>
+        </div>
+    </div>
+</div>

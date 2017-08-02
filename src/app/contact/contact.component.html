@@ -1,0 +1,28 @@
+  <md-card class="container">
+    <h2> Get In Touch </h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <md-input-container>
+          <input mdInput placeholder="First Name" formControlName="firstname">
+        </md-input-container>
+
+        <md-input-container>
+          <input mdInput placeholder="Email" formControlName="email">
+        </md-input-container>
+ 
+         <!-- <md-error *ngIf="form">
+          Email is <strong>required</strong>
+        </md-error>   -->
+
+        <md-input-container>
+          <input mdInput placeholder="Phone Number" formControlName="phone">
+        </md-input-container>
+
+        <md-input-container>
+          <textarea mdInput placeholder=" Message" cols="24" formControlName="message"></textarea>
+        </md-input-container>
+
+        <button type="submit" [disabled]="!form.valid" md-raised-button>Send</button>
+    </form>
+  </md-card>

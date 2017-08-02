@@ -1,0 +1,45 @@
+<div class="banner row">
+    <a href=""><img src="../../assets/5 (3).jpg" alt=""></a>    
+</div>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="" id="nav-items">
+      <!--col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-4-->
+      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" 
+        data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--<a class="navbar-brand" routerLink="">Nick Vorraso</a>-->
+      </div>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ in: routeChanged }">
+        <ul class="nav navbar-nav">
+          <!-- <li><a class="link" routerLinkActive="active" routerLink="/blog">Blog</a>
+            <span class="underline"></span>
+          </li> -->
+          <li><a class="link" routerLinkActive="active" routerLink="/about">About</a>
+            <span class="underline"></span>
+          </li>
+          <li><a class="link" routerLinkActive="active" routerLink="/portfolio">Portfolio</a>
+            <span class="underline"></span>
+          </li>
+          <li><a class="link" routerLinkActive="active" routerLink="/contact">Contact</a>
+            <span class="underline"></span>
+          </li>
+          <li><a class="link" *ngIf="authService.isAuthenticated()" routerLink="admin">Admin</a>
+            <span class="underline"></span>
+          </li>
+          <li><a class="link" *ngIf="authService.isAuthenticated()" (click)="onLogout()" routerLink="login">Logout</a>
+            <span class="underline"></span>
+          </li>
+        </ul>
+    </div>
+
+    </div>
+  </div>
+</nav>

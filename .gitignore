@@ -1,3 +1,7 @@
+node_modules
+sendgridConfig.js
+environment.ts
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

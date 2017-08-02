@@ -1,0 +1,8 @@
+<div class="container">
+    <add-post *ngIf="authService.isAuthenticated()"></add-post>
+    <div class="row">
+        <div style="margin: 0 auto">
+            <app-posts></app-posts>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+textarea {
+    resize: vertical;
+    height: 125px;
+    max-height: 600px;
+}
+.panel {
+    max-width:600px;
+    min-width:285px; 
+    margin: auto;
+    margin-bottom: 75px;
+}
+img {
+    max-width: 60%;
+    max-height: 150px;
+}
+#file {
+    margin: 0;
+}

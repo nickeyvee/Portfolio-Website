@@ -1,0 +1,39 @@
+nav {
+    box-shadow: 0 4px 8px grey;
+}
+.navbar-nav{
+    float:none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+}
+.banner {
+    background: #222222;
+    margin: 0 auto;
+}
+img{
+    max-height: 80px;
+    min-height: 50px;
+    display: block;
+    margin: auto;
+}
+.top-bar {
+    background: #333740;
+}
+.navbar-brand {
+    font-family: Roboto, Helvetica, sans-serif;
+    margin-right: 25px;
+}
+.top-bar-title {
+    font-family: 'sans';
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.nav-menu a {
+    color: #ffffff;
+}
+
+.nav-menu {
+    list-style: none;
+}
