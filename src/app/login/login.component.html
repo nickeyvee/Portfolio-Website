@@ -6,24 +6,24 @@
     </div>
     
     <div class="row">
-        <form (ngSubmit)="login(f)" #f="ngForm" class="container-fluid">
+        <form [formGroup]="form" (ngSubmit)="login()" class="container-fluid">
             <div class="input-group signup">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input class="form-control" type="text" placeholder="enter email address" id="email" 
-                [(ngModel)]="email" name="email" required #em="ngModel">         
+                <input class="form-control" 
+                placeholder="enter email address" id="email" formControlName="email">         
             </div>
                 <br>
             <div class="input-group signup">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input class="form-control" type="password" placeholder="Enter Password" id="password" 
-                [(ngModel)]="password" name="password" required #pwd="ngModel" minlength="1">
+                <input class="form-control" type="password"
+                placeholder="Enter Password" id="password" formControlName="password" minlength="1">
             </div>
                 <!--display error for invalid password-->
-            <div class="alert alert-danger" *ngIf="authService.loginError()">
+             <div class="alert alert-danger" *ngIf="authService.loginError()">
                 {{ authService.errorMSG }}
-            </div>
+            </div> 
                 <br>
-            <button class="btn btn-info" type="submit" [disabled]="!f.valid">Submit</button>
+            <button class="btn btn-info" type="submit" [disabled]="!form.valid">Submit</button>
         </form>
     </div>
         <hr>

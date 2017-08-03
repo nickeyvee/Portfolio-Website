@@ -4,13 +4,15 @@ import { AuthService } from "app/auth/auth.service";
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: 'admin.component.html'
+  selector: 'app-admin-menu',
+  templateUrl: 'admin-menu.component.html'
 })
-export class AdminComponent implements OnInit {
-
+export class AdminMenuComponent implements OnInit {
+ll
   constructor( 
-    private dataService: DataService, private authService: AuthService, private router: Router
+    public dataService: DataService, 
+    public authService: AuthService, 
+    public router: Router
   ) { }
 
   ngOnInit() {

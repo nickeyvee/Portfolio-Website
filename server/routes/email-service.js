@@ -1,29 +1,11 @@
-'strict mode';
-
-const express = require('express');
+const config = require('../config/sendgridConfig.js')
 const emailjs = require('emailjs');
-const bodyParser = require('body-parser');
-const config = require('./sendgridConfig.js')
+const express = require('express');
+const router = express.Router();
 
+// ---ENDPOINT FOR SENDGRID EMAIL SERVICE---
 
-const app = express();  
-const staticRoot = __dirname;  
-
-//--- EXPRESS MIDDLEWARE ---
-
-app.set('port', (process.env.PORT || 3000));
-app.use(express.static(staticRoot));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
-
-
-app.get('/', ( req, res ) => {
-    res.sendFile('index.html');
-});
-
-app.post('/sendmail', ( req, res ) => {
+router.post('/', ( req, res ) => {
 
     let server = emailjs.server.connect( config );
     
@@ -57,7 +39,4 @@ app.post('/sendmail', ( req, res ) => {
     });           
 });
 
-
-app.listen( app.get('port'), () => {  
-    console.log('app running on port', app.get('port'));
-});
+module.exports = router;

@@ -5,19 +5,24 @@
 
         <md-input-container>
           <input mdInput placeholder="First Name" formControlName="firstname">
+          <md-error *ngIf="!form.controls.firstname.valid && form.controls.firstname.touched">
+            Name is <strong>required</strong>
+          </md-error>  
         </md-input-container>
 
         <md-input-container>
           <input mdInput placeholder="Email" formControlName="email">
+          <md-error *ngIf="!form.controls.email.valid && form.controls.email.touched">
+            Email is <strong>required</strong>
+          </md-error>   
         </md-input-container>
- 
-         <!-- <md-error *ngIf="form">
-          Email is <strong>required</strong>
-        </md-error>   -->
 
         <md-input-container>
           <input mdInput placeholder="Phone Number" formControlName="phone">
-        </md-input-container>
+          <md-error *ngIf="!form.controls.phone.valid && form.controls.phone.touched">
+            Phone number is <strong>required</strong>
+          </md-error>  
+        </md-input-container> 
 
         <md-input-container>
           <textarea mdInput placeholder=" Message" cols="24" formControlName="message"></textarea>

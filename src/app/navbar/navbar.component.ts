@@ -13,7 +13,7 @@ export class NavComponent {
     routeChanged: boolean = false;
     lastRoute: string;
 
-    constructor( private authService: AuthService, private router: Router ) {
+    constructor( public authService: AuthService, public router: Router ) {
         router.events.subscribe(() => {
             if( this.lastRoute !== router.url ) {
                 this.routeChanged = true;

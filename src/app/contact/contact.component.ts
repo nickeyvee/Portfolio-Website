@@ -16,9 +16,9 @@ export class ContactComponent {
   firstname = new FormControl('', Validators.required );
 
   constructor( 
-    private dataService: DataService, 
-    private router: Router,
-    private fb: FormBuilder
+    public dataService: DataService, 
+    public router: Router,
+    public fb: FormBuilder
    ) {
     this.form = fb.group({
       firstname: this.firstname,
@@ -30,7 +30,7 @@ export class ContactComponent {
 
   onSubmit( ) {
 
-    console.log( this.form.value );
+    console.log( this.form );
     
     let email = this.form.value.email;
     let phone = this.form.value.phone;

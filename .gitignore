@@ -1,6 +1,12 @@
-node_modules
+# Dependences and Setup
+/node_modules
 sendgridConfig.js
 environment.ts
+
+# compiled output
+/dist
+/tmp
+/out-tsc
 
 # Windows image file caches
 Thumbs.db

@@ -1,17 +1,16 @@
-//import * as firebase from 'firebase';
+import * as firebase from 'firebase';
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
 import { Router } from "@angular/router";
 
 
 @Injectable()
 
 export class AuthService {
-    currentUser: firebase.User;
-    errorMSG: string = null;
+    public currentUser: firebase.User;
+    public errorMSG: string = null;
 
-    constructor( private afAuth: AngularFireAuth, private router: Router ) {
+    constructor( public afAuth: AngularFireAuth, public router: Router ) {
        afAuth.authState.subscribe( user => this.currentUser = user ) 
        //console.log( typeof this.currentUser );
     }
