@@ -12,11 +12,14 @@
     "build:nodeserver": "ng build && cp -r node_server/* dist",
     "build:nodeserver-prod": "ng build -prod && cp -r node_server/* dist",
     "serve-build": "npm run build:nodeserver && cd dist && node server.js",
-    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node server.js"
+    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node server.js",
+    "serve-aot": "ng build --aot -prod && node server"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.2.7",
     "@angular/animations": "^4.3.2",
+    "@angular/cdk": "^2.0.0-beta.8",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -39,7 +42,6 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.1.3",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",

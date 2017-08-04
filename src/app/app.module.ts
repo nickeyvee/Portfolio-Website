@@ -10,7 +10,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MD_PLACEHOLDER_GLOBAL_OPTIONS, MdInputModule, MdCardModule, MdIconModule } 
+import { MdButtonModule, MdCheckboxModule, MD_PLACEHOLDER_GLOBAL_OPTIONS, MdInputModule, MdCardModule, MdIconModule, MdSelectModule } 
   from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -71,7 +71,8 @@ import { AdminMenuComponent } from "app/admin/admin-menu/admin-menu.component";
     MdCheckboxModule,
     MdInputModule,
     MdCardModule,
-    MdIconModule
+    MdIconModule,
+    MdSelectModule
   ],
   providers: [ DataService, AuthService, AuthGuard
     // {provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'always' }}

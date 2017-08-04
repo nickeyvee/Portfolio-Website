@@ -15,6 +15,12 @@ export class ContactComponent {
 
   firstname = new FormControl('', Validators.required );
 
+  subjects = [
+    { value: "Need a website" },
+    { value: "Have a question" },
+    { value: "Looking to hire" }
+  ]
+
   constructor( 
     public dataService: DataService, 
     public router: Router,
@@ -24,7 +30,8 @@ export class ContactComponent {
       firstname: this.firstname,
       email: ['', Validators.required ],
       phone: ['', Validators.required ],
-      message: ['', Validators.required ]
+      subject: ['', Validators.required ],
+      comments: ['', Validators.required ]
     })
   }
 
@@ -34,8 +41,9 @@ export class ContactComponent {
     
     let email = this.form.value.email;
     let phone = this.form.value.phone;
-    let message = this.form.value.message;
+    let message = this.form.value.comments;
     let firstName = this.form.value.firstname;
+    let subject = this.form.value.subject;
 
     let callback = ( err, res ) => {
       if ( err ) {
