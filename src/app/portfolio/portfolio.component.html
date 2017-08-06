@@ -1,31 +1,26 @@
 <div class="container">
-  <div class="flex-container">
-    <div class="flex-item" id="title">
-      <h1>Portfolio</h1>
+  <div class="row">
+    
+    <div id="column" class="col-xs-6">
+      <div class="flex-item" id="title">
+        <h1>Portfolio</h1>
+      </div>  
+      <div class="row-1" *ngFor="let project of row1">
+        <a class="flex-item" href="{{ project.href }}" target="_blank">
+          <img src="{{ project.imgSrc }}" alt="Screenshot 2017 01 25 at 8 02 57 PM" border="0" />
+          <h3>{{ project.name }}</h3>
+        </a>
+      </div>
     </div>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/dOPNJx" target="_blank">
-      <img src="http://image.ibb.co/bHaBJv/Screenshot_2017_01_25_at_8_02_57_PM.png" alt="Screenshot 2017 01 25 at 8 02 57 PM" border="0" />
-      <h3>Javascript Calculator</h3>
-    </a>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/JKgLwV" target="_blank">
-      <img src="https://image.ibb.co/i66mUa/Screenshot_31.png" alt="Screenshot 2017 01 23 at 7 34 28 PM" border="0" />
-      <h3>WikiPedia Viewer</h3>
-    </a>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/VPKpNe" target="_blank">
-      <img src="http://image.ibb.co/c4QYWF/Screenshot_2017_01_23_at_7_37_44_PM.png" alt="Screenshot 2017 01 23 at 7 37 44 PM" border="0" />
-      <h3>Simon Game</h3>
-    </a>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/JEdaqM" target="_blank">
-      <img src="http://image.ibb.co/fB9Gka/Screenshot_2017_01_25_at_7_59_34_PM.png" alt="Screenshot 2017 01 25 at 7 59 34 PM" />
-      <h3>Pomodoro Clock</h3>
-    </a>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/LxEogK" target="_blank">
-      <img src="http://image.ibb.co/ipL0BF/Screenshot_2017_01_25_at_8_05_48_PM.png" alt="Screenshot 2017 01 25 at 8 05 48 PM" border="0" />
-      <h3>tic-tac-toe</h3>
-    </a>
-    <a class="flex-item" href="https://codepen.io/nickey_vee/pen/YWBvpX" target="_blank">
-      <img src="http://image.ibb.co/haFYWF/Screenshot_2017_01_23_at_7_57_24_PM.png" alt="Screenshot 2017 01 23 at 7 57 24 PM" border="0" />
-      <h3>Quote Generator</h3>
-    </a>
+
+    <div id="column" class="col-xs-6">
+      <div class="row-2" *ngFor="let project of row2">
+        <a class="flex-item" href="{{ project.href }}" target="_blank">
+          <img src="{{ project.imgSrc }}" alt="Screenshot 2017 01 25 at 8 02 57 PM" border="0" />
+          <h3>{{ project.name }}</h3>
+        </a>
+      </div> 
+    </div>
+
   </div>
 </div>

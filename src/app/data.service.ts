@@ -32,7 +32,7 @@ export class DataService {
                 
                 this.postsArr.push( childData );            
             })
-        console.log( this.postsArr );
+        // console.log( this.postsArr );
         // posts array
         }), function (errorObject) {
         console.log("The read failed: " + errorObject.code);
