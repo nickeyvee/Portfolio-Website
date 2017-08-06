@@ -26,28 +26,33 @@
     margin-bottom: 70px;
 }
 .container .flex-container .flex-item {
-  box-shadow: 5px 8px 18px grey;
-  text-decoration: none;
-  transition: 0.3s;
-  flex-grow: 1;
-  flex-shrink: 1;
-  width: 310px;
-  margin: 15px;
-  padding: 0;
-  color: black;
+    box-shadow: 2px 2px 5px grey; 
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    border-radius: 3px; 
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 310px;
+    margin: 15px;
+    padding: 0; 
+    color: black;
+    z-index: 2;
 }
 .container .flex-container .flex-item img {
-  flex-grow: 1;
-  height: inherit;
-  width: 100%;
+    flex-grow: 1;
+    height: inherit;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+    z-index: -1;
 }
 .container .flex-container .flex-item:hover {
-  box-shadow: 1px 1px 2px grey;
+    box-shadow: 5px 8px 25px grey;
+    transform: scale(1.075);
 }
 h3 {
-  padding: 15px;
-  float: none;
-  margin: auto;
-  display: table;
-  table-layout: fixed;
+    padding: 15px;
+    float: none;
+    margin: auto;
+    display: table;
+    table-layout: fixed;
 }

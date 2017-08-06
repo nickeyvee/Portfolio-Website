@@ -27,19 +27,21 @@
     margin-bottom: 70px;
 }
 .container .flex-container .flex-item {
-    width: 45%;
+    box-shadow: 2px 2px 5px grey; 
+    transition: all 0.2s ease-in-out;
+    border-radius: 3px;
+    background: white;
     padding: 10px;
     min-width: 250px;
     height: 300px;
+    width: 45%;
     margin: 15px;
     flex-grow: 1;
     flex-shrink: 1;
-    background: white;
-    box-shadow: 5px 8px 18px grey;
-    transition: 0.3s;
 }
 .container .flex-container .flex-item:hover {
-    box-shadow: 1px 1px 2px grey;
+    box-shadow: 5px 8px 25px grey;
+    transform: scale(1.075);
 }
 .profile-image {
     width: 200px;
