@@ -1,73 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro|Quicksand|Rajdhani');
 
 @media screen and (min-width: 400px) {
-    .flex-container {
+    .container {
         max-height: 1200px;
     }
-}
-#title {
-    display: flex;
-    color: white;
-    background: #69397B;
-    margin-top: 15px;
-    height: 80px;
-}
-h1 {
-    text-align: center;
-    flex-grow: 1;
 }
 .container {
     font-family: 'Rajdhani', sans-serif;
     max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0 auto;
-    margin-bottom: 85px;
-}
-#column {
-    width: 350px;
-}
-.row-1 {
-    display: flex;
-    max-width: 50%;
-    flex-direction: column; 
-    flex-wrap: wrap;
-    margin-left: 0;
-}
-.row-2 {
-    display: flex;
-    max-width: 48%;
-    flex-direction: column; 
-    flex-wrap: wrap;
-    margin-right: 0;
+    margin-bottom: 75px;
 }
 .flex-item {
     box-shadow: 2px 2px 5px grey; 
     transition: all 0.2s ease-in-out;
-    text-decoration: none;
+    margin: 15px 15px 50px 15px;
     border-radius: 3px; 
+    width: 310px;
     flex-grow: 1;
     flex-shrink: 1;
-    width: 310px;
-    margin: 15px;
     padding: 0; 
     color: black;
-    z-index: 2;
+    z-index: 1;
 }
-.flex-item img {
+.title {
+    display: block;
+    color: white;
+    text-align: center;
+    background: #69397B;
+    margin-top: 15px;
+    height: 80px;
+}
+img, .img {
     flex-grow: 1;
     height: inherit;
+    overflow: hidden;
     border-radius: 3px 3px 0 0;
     width: 100%;
-    z-index: -1;
 }
 .flex-item:hover {
+    background-color: rgba(200,100,0,.5);
+    background-blend-mode: multiply;
     box-shadow: 5px 8px 25px grey;
     transform: scale(1.075);
 }
-h3 {
+h3, .h3 {
     padding: 15px;
     float: none;
     margin: auto;
     display: table;
     table-layout: fixed;
+}
+a, .a {
+    text-decoration: none;
+    color: black;
 }

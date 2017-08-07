@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -17,26 +17,47 @@ import { ProjectModel } from './portfolio.model';
     ProjectModel
   ],
   animations: [
-
+    // trigger('stateChange', [
+    //   state('inactive', style({
+    //     display: "none" 
+    //   })),
+    //   state('active',   style({
+    //     display: "show"        
+    //     // backgroundColor: '#cfd8dc',
+    //     // transform: 'scale(1.1)'
+    //   })),
+    //   transition('inactive => active', animate('100ms ease-in')),
+    //   transition('active => inactive', animate('100ms ease-out'))
+    // ])
   ]
 })
-export class PortfolioComponent {
+export class PortfolioComponent  {
 
-    row1: any[];
-    row2: any[];
-    allProjects: any[];
+    state: string = "inactive";
+    active: boolean = false;
+    projects: any[];
 
-    constructor( public projectModel: ProjectModel ) {
-      let projects = projectModel.projects;
-      this.allProjects = projects;
-
-      if ( projects.length % 2 === 0 ) {  
-        this.row1 = projects.slice( 0, projects.length / 2 );
-        this.row2 = projects.slice( projects.length / 2, projects.length );
-      } else {
-        this.row1 = projects.slice( 0, (Math.round( projects.length / 2)) - 1);
-        this.row2 = projects.slice( (Math.round( projects.length / 2)) - 1, projects.length );
-      }
+    constructor( public projectModel: ProjectModel, public elementRef: ElementRef ) {
+      this.projects = projectModel.projects;
     }
 
+
+    toggle( event , i ) {
+    
+      let listId = `.project_${ i }`;
+      let el = event.target.classList;
+
+      console.log( listId );
+      console.log( this.active );
+
+      //let overlay = this.elementRef.nativeElement.querySelector( listId );
+
+      this.active = ( this.active === true ? false : true );
+
+      if( this.active ) {
+        el.add('active');
+      } else {
+        el.remove('active');
+      }
+    }
 }
