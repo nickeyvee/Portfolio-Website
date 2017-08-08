@@ -1,16 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro|Quicksand|Rajdhani');
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
     .container {
         max-height: 1200px;
+        flex-wrap: wrap;
     }
+}
+.active {
+    transition: 0.1s; 
+    /* background-blend-mode: multiply; */
+    background: white; 
+    opacity: 0.60; 
+}
+.hidden {
+    opacity: 0;
+}
+.blur {
+    filter: blur( 2px );
+}
+.media {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: -1;
+}
+.media-group {
+    cursor: pointer;
+    border-radius: 3px; 
+    /* position: flex; */
+    height: 100%;
+    width: 100%;
+    z-index: 25;
+}
+.media-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 25px 18px 30px 18px;
+    color: black;
+    z-index: 50;
 }
 .container {
     font-family: 'Rajdhani', sans-serif;
-    max-width: 690px;
+    max-width: 695px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     padding: 0;
     margin: 0 auto;
     margin-bottom: 75px;
@@ -18,6 +52,7 @@
 .flex-item {
     box-shadow: 2px 2px 5px grey; 
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
     margin: 15px 15px 50px 15px;
     border-radius: 3px; 
     width: 310px;
@@ -39,21 +74,25 @@ img, .img {
     flex-grow: 1;
     height: inherit;
     overflow: hidden;
+    transition: all 0.2s ease-in-out;
     border-radius: 3px 3px 0 0;
     width: 100%;
 }
 .flex-item:hover {
-    background-color: rgba(200,100,0,.5);
-    background-blend-mode: multiply;
+    /* background-color: rgb(230, 115, 0); */
+    transition: 0.3s;
+    /* background-color: #E69748; */
     box-shadow: 5px 8px 25px grey;
-    transform: scale(1.075);
+    transform: scale(1.05);
 }
 h3, .h3 {
+    display: flex;
+    table-layout: fixed;
+    position: relative;
     padding: 15px;
     float: none;
     margin: auto;
-    display: table;
-    table-layout: fixed;
+    z-index: 15;
 }
 a, .a {
     text-decoration: none;
