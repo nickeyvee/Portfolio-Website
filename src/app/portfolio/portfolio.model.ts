@@ -13,7 +13,7 @@ export class ProjectModel {
         href: "https://codepen.io/nickey_vee/pen/JKgLwV",
         imgSrc: "https://image.ibb.co/i66mUa/Screenshot_31.png",
         name: "WikiPedia Viewer",
-        description: `A Wikipedia Search user interface. Utilizes Wikipedia's open source search api using ajax.`
+        description: `A Wikipedia-Search UI. Utilizes Wikipedia's open source search api using ajax.`
     },
     {
         id: "project_2",

@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutModel } from "app/about/about.model";
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  providers: [ AboutModel ]
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
+  basic: any;
+  skills: string[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor( public aboutModel: AboutModel ) {
+    this.basic = aboutModel.basic;
+    this.skills = aboutModel.skills;
+    console.log( this.basic.img );
   }
-
+  
 }

@@ -8,9 +8,8 @@
 }
 .active {
     transition: 0.1s; 
-    /* background-blend-mode: multiply; */
-    background: white; 
-    opacity: 0.60; 
+    /* background-color: rgb(230, 180, 0);      */
+    opacity: 0.70; 
 }
 .hidden {
     opacity: 0;
@@ -63,6 +62,7 @@
     z-index: 1;
 }
 .title {
+    cursor: pointer;
     display: block;
     color: white;
     text-align: center;
@@ -79,9 +79,9 @@ img, .img {
     width: 100%;
 }
 .flex-item:hover {
-    /* background-color: rgb(230, 115, 0); */
-    transition: 0.3s;
+    transition: 0.2s;
     /* background-color: #E69748; */
+    background-color: rgb(230, 180, 0);  
     box-shadow: 5px 8px 25px grey;
     transform: scale(1.05);
 }

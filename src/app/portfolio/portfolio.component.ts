@@ -45,8 +45,8 @@ export class PortfolioComponent  {
       const Query = ( el ) => event.target.querySelector( el );
 
       event.target.classList.toggle('active');
-      Query('img').classList.toggle('active');
-      Query('img').classList.toggle('blur');
+      // Query('img').classList.toggle('active');
+      // Query('img').classList.toggle('blur');
       Query('.media-text').classList.toggle('hidden');
     }
 }
