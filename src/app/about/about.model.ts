@@ -7,12 +7,13 @@ export class AboutModel {
    }
    skills: string[] = [
       "HTML/CSS", 
-      "JavaScript (ES 6)",
+      "JavaScript (ES6)",
+      "jQuery",
       "Angular 2",
       "Node.Js + Express.Js",
       "NPM",
       "TypeScript",
-      "jQuery"
+      "MongoDB"
    ];
    summary: string = "";
 }

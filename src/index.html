@@ -5,15 +5,22 @@
   <title>PersonalBlog</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
     body {
-      background: linear-gradient( 132deg, #052042, #440022);
-      background-attachment: fixed;
+      background: linear-gradient( 132deg, #052042, #4d0028 );
+      background-size: 400% 400%;
+      animation: BackgroundGradient 26s ease infinite;
+    }
+
+    @keyframes BackgroundGradient {
+      0% { background-position: 0% 50% }
+      50% { background-position: 100% 50% }
+      100% { background-position: 0% 50% }
     }
   </style>
 </head>
-<!-- <body style="background: #eff2f4"> -->
 <body>  
   <app-root></app-root>
 </body>

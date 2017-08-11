@@ -1,13 +1,11 @@
 <div class="footer navbar navbar-fixed-bottom navbar-inverse">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-4">
-        <p style="text-align:center; color: grey">© 2017 Hand coded by Nicholas vorraso</p>
-      </div>
-      <div class="col-xs-3 col-sm-4">
-        <a routerLink="/login" id="login" *ngIf="!authService.isAuthenticated()">Login</a>
-        <a *ngIf="authService.isAuthenticated()" class="btn btn-danger" (click)="authService.logout()" routerLink="/login">Logout</a>
-      </div>
+    <div class="flex-item">
+      <p>© 2017 Hand coded by Nicholas vorraso</p>
+    </div>
+    <div class="flex-item">
+      <button md-button routerLink="/login" *ngIf="!authService.isAuthenticated()">Login</button>
+      <a *ngIf="authService.isAuthenticated()" class="btn btn-danger login" (click)="authService.logout()" routerLink="/login">Logout</a>
     </div>
   </div>
 </div>

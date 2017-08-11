@@ -8,11 +8,16 @@ import { FormGroup, FormControl, Validators, FormBuilder }
   selector: 'app-login',
   templateUrl: './login.component.html',
   styles: [`
-  .well {
+  md-card {
+    background-color: rgba(0,0,0,0.2);
     max-width:450px; 
     min-width:285px; 
     margin: auto;
     margin-bottom: 100px;
+  }
+  .return {
+    background-color: rgba(0,0,0,0.2);
+    color: #666666;
   }
   `],
   providers: [ AuthService ]

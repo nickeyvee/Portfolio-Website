@@ -1,10 +1,10 @@
-<div class="well">
+<md-card>
     <div class="row">
         <div class="col-md-8">
-            <h3>Login to your account</h3>
-        </div>
+        <h3>Login to your account</h3>
     </div>
-    
+</div>
+
     <div class="row">
         <form [formGroup]="form" (ngSubmit)="login()" class="container-fluid">
             <div class="input-group signup">
@@ -23,16 +23,15 @@
                 {{ authService.errorMSG }}
             </div> 
                 <br>
-            <button class="btn btn-info" type="submit" [disabled]="!form.valid">Submit</button>
+            <button md-raised-button type="submit" [disabled]="!form.valid">Submit</button>
         </form>
     </div>
-        <hr>
 
     <div class="row">
         <div class="pull-right">
             <div class="col-md-4">
-                <button type="button" class="btn btn-default" (click)="cancel()">Back to the Main Site</button>
+                <button md-button class="return" (click)="cancel()">Back to the Main Site</button>
             </div>
         </div>
     </div>
-</div>
+</md-card>

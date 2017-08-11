@@ -1,6 +1,13 @@
-.container {
-    margin: 10px;
+.footer {
+    background-color: rgba(0,0,0,0.3);
 }
-#login {
+.container {
+    display: flex;
+    max-width: 425px;
+}
+.flex-item {
+    margin: 0 auto;
     text-decoration: none;
+    padding: 15px;
+    color:   #666666;
 }
