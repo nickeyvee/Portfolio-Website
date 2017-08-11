@@ -2,7 +2,7 @@
   <div class="flex-item title">
     <h1>Portfolio</h1>
   </div>  
-  <div class="flex-item" *ngFor="let project of projects">
+  <md-card class="flex-item" *ngFor="let project of projects">
     <a href="{{ project.href }}" target="_blank"><div class="media-group" on-mouseenter="toggle($event)" on-mouseleave="toggle($event)">
       <p class="media media-text hidden">{{ project.description }}</p>
       <a class="media" href="{{ project.href }}" target="_blank">
@@ -10,5 +10,5 @@
         <h3 class="media">{{ project.name }}</h3>
       </a>
     </div></a>
-  </div>
+  </md-card>
 </div>

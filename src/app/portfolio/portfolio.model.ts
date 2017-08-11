@@ -3,10 +3,10 @@ export class ProjectModel {
  projects: any[] = [
     {
         id: "project_0",
-        href: "https://codepen.io/nickey_vee/pen/dOPNJx",
-        imgSrc: "http://image.ibb.co/bHaBJv/Screenshot_2017_01_25_at_8_02_57_PM.png",
-        name: "Javascript Calculator",
-        description: `A standard-function calculator for Free Code Camp. Built with JavaScript and jQuery.`
+        href: "https://shorten2020.herokuapp.com/",
+        imgSrc: "https://image.ibb.co/dNLNEv/url_shortener_ss.png",
+        name: "Express.Js URL Shortener",
+        description: "A simple URL shortener demo using Express.Js and MongoDB."
     },
     {
         id: "project_1",
@@ -25,10 +25,10 @@ export class ProjectModel {
     },
     {
         id: "project_3",
-        href: "https://codepen.io/nickey_vee/pen/JEdaqM" ,
-        imgSrc: "http://image.ibb.co/fB9Gka/Screenshot_2017_01_25_at_7_59_34_PM.png",
-        name: "Pomodoro Clock",
-        description: `A Pomodoro timer. I built this one to practice my JavaScript Skills.`
+        href: "https://codepen.io/nickey_vee/pen/dOPNJx",
+        imgSrc: "http://image.ibb.co/bHaBJv/Screenshot_2017_01_25_at_8_02_57_PM.png",
+        name: "Javascript Calculator",
+        description: `A standard-function calculator for Free Code Camp. Built with JavaScript and jQuery.`
     },
     {
         id: "project_4",
@@ -43,5 +43,12 @@ export class ProjectModel {
         imgSrc: "http://image.ibb.co/haFYWF/Screenshot_2017_01_23_at_7_57_24_PM.png",
         name: "Quote Generator",
         description: `Random quotes by the greatest people of history. One of my first projects.`
-    }
+    },
+    {
+        id: "project_6",
+        href: "https://codepen.io/nickey_vee/pen/JEdaqM" ,
+        imgSrc: "http://image.ibb.co/fB9Gka/Screenshot_2017_01_25_at_7_59_34_PM.png",
+        name: "Pomodoro Clock",
+        description: `A Pomodoro timer. I built this one to practice my JavaScript Skills.`
+    },
 ]}

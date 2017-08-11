@@ -2,6 +2,7 @@
 
 .container {
     font-family: 'Rajdhani', sans-serif;
+    background-color: rgba(0,0,0,0.2);
     max-width: 325px;
     min-width: 190px;
     margin-bottom: 75px;

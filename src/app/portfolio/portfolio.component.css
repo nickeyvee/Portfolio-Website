@@ -2,14 +2,14 @@
 
 @media screen and (min-width: 450px) {
     .container {
-        max-height: 1200px;
+        max-height: 1500px;
         flex-wrap: wrap;
     }
 }
 .active {
     transition: 0.1s; 
-    /* background-color: rgb(230, 180, 0);      */
-    opacity: 0.70; 
+     background-color: red;
+     opacity: 0.2;
 }
 .hidden {
     opacity: 0;
@@ -36,7 +36,7 @@
     font-size: 25px;
     font-family: sans-serif;
     padding: 25px 18px 30px 18px;
-    color: black;
+    color: white;
     z-index: 50;
 }
 .container {
@@ -49,16 +49,17 @@
     margin-bottom: 75px;
 }
 .flex-item {
-    box-shadow: 2px 2px 5px grey; 
+    /* box-shadow: 2px 2px 5px grey;  */
     transition: all 0.2s ease-in-out;
-    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
     margin: 15px 15px 50px 15px;
     border-radius: 3px; 
+    font-family: inherit;
+    overflow: hidden;
     width: 310px;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 0; 
-    color: black;
+    padding: 0;
     z-index: 1;
 }
 .title {
@@ -75,14 +76,15 @@ img, .img {
     height: inherit;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    background-color: rgb(0,0,0,0.1); 
     border-radius: 3px 3px 0 0;
+    opacity: 0.9;
     width: 100%;
 }
 .flex-item:hover {
     transition: 0.2s;
-    /* background-color: #E69748; */
-    background-color: rgb(230, 180, 0);  
-    box-shadow: 5px 8px 25px grey;
+    /* background-color: #E69748; */ 
+    /* box-shadow: 5px 8px 25px grey; */
     transform: scale(1.05);
 }
 h3, .h3 {
@@ -93,6 +95,7 @@ h3, .h3 {
     float: none;
     margin: auto;
     z-index: 15;
+    color: white;
 }
 a, .a {
     text-decoration: none;

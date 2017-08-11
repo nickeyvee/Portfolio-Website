@@ -1,19 +1,19 @@
 <div class="container">
   <div class="flex-container">
-    <div class="flex-item" id="title">
+    <div class="flex-item title">
       <h1>About Me</h1>
     </div>
-    <div class="flex-item" id="profile">
+    <md-card class="flex-item" id="profile">
       <div class="profile-image">
         <img  src="{{ basic.imgSrc }}" border="0">
-        </div>
       </div>
-    <div class="flex-item" id="skills">
+    </md-card>
+    <md-card class="flex-item" id="skills">
       <h1>Technolgies I use</h1>
       <div *ngFor="let skill of skills">
         <p>{{ skill }}</p>
       </div>
-    </div>    
-    <div class="flex-item" id="social"></div>
+    </md-card>    
+    <md-card class="flex-item" id="social"></md-card>
   </div>
 </div>

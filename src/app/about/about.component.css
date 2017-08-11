@@ -5,12 +5,8 @@
         max-height: 700px;
     }
 }
-#title {
-    text-align: center;
-    color: white;
-    padding: 0;
-    background: #69397B;
-    height: 80px;
+md-card {
+    background-color: rgba(0,0,0,0.2);
 }
 .container {
     font-family: 'Rajdhani', sans-serif;
@@ -18,7 +14,7 @@
     padding: 0;
     margin: 0 auto;
 }
-.container .flex-container {
+.flex-container {
     display: flex;
     max-width: inherit;
     flex-direction: column; 
@@ -26,11 +22,10 @@
     margin: 0 auto;
     margin-bottom: 70px;
 }
-.container .flex-container .flex-item {
-    box-shadow: 2px 2px 5px grey; 
-    transition: all 0.2s ease-in-out;
+.flex-item {
+    transition: 0.2s;
+    cursor: pointer;
     border-radius: 3px;
-    background: white;
     padding: 10px;
     min-width: 250px;
     height: 300px;
@@ -39,8 +34,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
-.container .flex-container .flex-item:hover {
-    box-shadow: 5px 8px 25px grey;
+.flex-item:hover {
     transform: scale(1.075);
 }
 .profile-image {
@@ -50,11 +44,24 @@
 #profile {
     height: 450px;
 }
-
 #profile img {
     border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 1px 1px 8px grey;
+    border: 3px solid grey;
+    box-shadow: 1px 1px 8px black;
     height: 200px;
     margin: auto;
+}
+.title {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 0;
+    background: #69397B;
+    margin-top: 15px;
+    height: 80px;
+}
+h1, .h1 {
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 15px;
 }

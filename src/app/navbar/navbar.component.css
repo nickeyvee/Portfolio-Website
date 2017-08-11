@@ -1,5 +1,5 @@
-nav {
-    box-shadow: 0 4px 8px grey;
+.navbar {
+    background-color: rgba(50,50,50,0.1);
 }
 .navbar-nav{
     float:none;
@@ -7,18 +7,11 @@ nav {
     display: table;
     table-layout: fixed;
 }
-.banner {
-    background: #222222;
-    margin: 0 auto;
-}
 img{
     max-height: 80px;
     min-height: 50px;
     display: block;
     margin: auto;
-}
-.top-bar {
-    background: #333740;
 }
 .navbar-brand {
     font-family: Roboto, Helvetica, sans-serif;
