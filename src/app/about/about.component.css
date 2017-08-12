@@ -29,10 +29,8 @@
     height: 300px;
     width: 45%; 
     margin: 15px;
-    /* flex-grow: 1;
-    flex-shrink: 1; */
 }
-.flex-item:hover {
+.card:hover {
     transform: scale(1.075);
 }
 .profile-image {
@@ -61,11 +59,14 @@ img {
 .icon {
     text-align: center;
 }
+.skills {
+    text-align: center;
+    width: 100%;
+}
 .skill {
-    display: table-cell;
-    float: left;
+    display: inline-block;
     background-color: rgba(0,0,0,0.2);
     font-size: 15px;
     padding: 8px;
-    margin: 8px 15px 8px 8px;
+    margin: 8px;
 }
