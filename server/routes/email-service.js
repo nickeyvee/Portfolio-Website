@@ -1,4 +1,4 @@
-const config = require('../config/sendgridConfig.js')
+const config = require('../config/sendgridConfig.js') || process.env.EMAIL;
 const emailjs = require('emailjs');
 const express = require('express');
 const router = express.Router();
