@@ -26,15 +26,15 @@
     border-radius: 3px;
     padding: 10px;
     min-width: 250px;
-    height: 300px;
+    /* min-height: 300px; */
     width: 45%; 
-    margin: 15px;
+    margin: 15px auto;
 }
 .card:hover {
     transform: scale(1.075);
 }
 .profile-image {
-    width: 200px;
+    width: 120px;
     margin: auto;
 }
 .profile {
@@ -42,9 +42,9 @@
 }
 img {
     border-radius: 50%;
-    border: 3px solid grey;
-    box-shadow: 1px 1px 8px black;
-    height: 200px;
+    box-shadow: 1px 1px 20px black;
+    filter: grayscale(30%);
+    height: 120px;
     margin: auto;
 }
 .title {
@@ -54,12 +54,17 @@ img {
     color: white;
     padding: 0;
     background: #69397B;
-    height: 80px;
+    height: 80px !important;
+    opacity: 0.65;
 }
 .icon {
     text-align: center;
 }
 .skills {
+    display: inline-block;
+    min-height: 300px;
+}
+.skill-group {
     text-align: center;
     width: 100%;
 }
@@ -69,4 +74,7 @@ img {
     font-size: 15px;
     padding: 8px;
     margin: 8px;
+}
+.social {
+    height: 225px;
 }

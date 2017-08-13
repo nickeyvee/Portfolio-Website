@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutModel } from "app/about/about.model";
+import { routerTransition } from '../router.animations';
 
 @Component({
   selector: 'app-about',

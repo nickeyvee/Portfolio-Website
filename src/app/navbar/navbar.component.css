@@ -1,11 +1,10 @@
-.navbar {
-    background-color: rgba(50,50,50,0.1);
+.container {
+    width: 100%;
 }
-.navbar-nav{
-    float:none;
+.nav {
     margin: 0 auto;
-    display: table;
-    table-layout: fixed;
+    text-align: center;
+    margin-bottom: 25px;
 }
 img{
     max-height: 80px;
@@ -13,20 +12,18 @@ img{
     display: block;
     margin: auto;
 }
-.navbar-brand {
-    font-family: Roboto, Helvetica, sans-serif;
-    margin-right: 25px;
-}
 .top-bar-title {
     font-family: 'sans';
     font-size: 22px;
     color: #ffffff;
 }
-
-.nav-menu a {
+button {
+    background-color: rgba(50,50,50,0.25);
+    display: inline-block;
+    margin: 5px;
     color: #ffffff;
 }
-
-.nav-menu {
-    list-style: none;
+button:focus {
+    background-color: #69397B;
+    opacity: 0.75;
 }

@@ -25,7 +25,6 @@
 .media-group {
     cursor: pointer;
     border-radius: 3px; 
-    /* position: flex; */
     height: 100%;
     width: 100%;
     z-index: 25;
@@ -49,10 +48,10 @@
     margin-bottom: 75px;
 }
 .flex-item {
-    /* box-shadow: 2px 2px 5px grey;  */
     transition: all 0.2s ease-in-out;
     background-color: rgba(0,0,0,0.2);
     margin: 15px 15px 50px 15px;
+    filter: grayscale(25%);
     border-radius: 3px; 
     font-family: inherit;
     overflow: hidden;
@@ -70,6 +69,7 @@
     background: #69397B;
     margin-top: 15px;
     height: 80px;
+    opacity: 0.65;
 }
 img, .img {
     flex-grow: 1;
