@@ -1,20 +1,20 @@
-import {trigger, state, animate, style, transition} from '@angular/core';
 
-export function routerTransition() {
-  return slideToLeft();
-}
+import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 
-function slideToLeft() {
-  return trigger('routerTransition', [
-    state('void', style({position:'fixed', width:'100%'}) ),
-    state('*', style({position:'fixed', width:'100%'}) ),
-    transition(':enter', [  // before 2.1: transition('void => *', [
-      style({transform: 'translateX(100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-    ]),
-    transition(':leave', [  // before 2.1: transition('* => void', [
-      style({transform: 'translateX(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(-100%)'}))
+export const routerTransition = trigger('routerTransition', [
+  transition('* <=> *', [
+    query(':enter, :leave', style({ position: 'fixed', width:'65%' }), { optional: true }),
+      
+    group([
+      query(':enter', [
+        style({ transform: 'translateX( 175% )' }),
+        animate('0.4s ease-in-out', style({ transform: 'translateX( 0% )' }))
+      ], { optional: true }),
+
+      query(':leave', [
+        style({ transform: 'translateX(0%)' }),
+        animate('0.4s ease-in-out', style({ transform: 'translateX( -175% )' }))
+      ], { optional: true }),
     ])
-  ]);
-}
+  ])
+])

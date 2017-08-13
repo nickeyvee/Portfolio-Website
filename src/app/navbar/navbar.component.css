@@ -23,7 +23,7 @@ button {
     margin: 5px;
     color: #ffffff;
 }
-button:focus {
+.active {
     background-color: #69397B;
     opacity: 0.75;
 }

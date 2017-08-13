@@ -1,7 +1,9 @@
 <div>
   <navi-bar></navi-bar>
-    <div class="container-fluid" >
-      <router-outlet></router-outlet>
+    <div class="container" >
+      <main [@routerTransition]="getState(o)">
+        <router-outlet #o="outlet"></router-outlet>
+      </main>
     </div>
-  <app-footer></app-footer>
+   <!-- <app-footer></app-footer> -->
 </div>

@@ -15,7 +15,6 @@ export class AboutComponent {
   constructor( public aboutModel: AboutModel ) {
     this.basic = aboutModel.basic;
     this.skills = aboutModel.skills;
-    console.log( this.basic.img );
   }
   
 }

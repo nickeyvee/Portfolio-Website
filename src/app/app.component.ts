@@ -1,3 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { routerTransition } from './router.animations';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "app/data.service";
 import { emailjs } from "emailjs/email";
@@ -5,8 +7,13 @@ import { emailjs } from "emailjs/email";
 
 @Component({
   selector: 'app-root',
+  animations: [ routerTransition ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [`
+    .container {
+      min-height: 1000px;
+    }
+  `]
 })
 export class AppComponent implements OnInit {
   
@@ -14,5 +21,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.fetchData();
+  }
+
+  getState( outlet ) {
+    return outlet.activatedRouteData.state;
   }
 }

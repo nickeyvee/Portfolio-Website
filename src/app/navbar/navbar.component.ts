@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, AfterViewChecked } from '@angular/core';
 import { AuthService } from "app/auth/auth.service";
 import { Router, NavigationEnd } from "@angular/router";
 
@@ -9,11 +9,13 @@ import { Router, NavigationEnd } from "@angular/router";
     providers: [ AuthService ]
 })
 
-export class NavComponent {
+export class NavComponent implements AfterViewChecked {
     routeChanged: boolean = false;
+    currentRoute: string;
     lastRoute: string;
 
     constructor( public authService: AuthService, public router: Router ) {
+        
         router.events.subscribe(() => {
             if( this.lastRoute !== router.url ) {
                 this.routeChanged = true;
@@ -23,7 +25,17 @@ export class NavComponent {
             }
         })
     }
-
+    
+    ngAfterViewChecked() {
+        this.currentRoute = this.router.url;
+        console.log( this.currentRoute );
+    }
+    
+    onClick() {
+        this.currentRoute = this.router.url;
+        console.log( this.currentRoute );        
+    }
+ 
     onRouteChange() {
         return this.routeChanged;
     }
