@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Rajdhani');
-
-@media screen and (min-width: 400px) {
-    .flex-container {
-        max-height: 700px;
-    }
+@import url('https://fonts.googleapis.com/css?family=Rajdhani|Open+Sans|Work+Sans');
+h1, .h1 {
+    font-family: 'Rajdhani', sans-serif;    
 }
 .container {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
     max-width: 690px;
     padding: 0;
     margin: 0 auto;
@@ -14,7 +11,7 @@
 .flex-container {
     display: flex;
     max-width: inherit;
-    flex-direction: column; 
+    flex-direction: row; 
     flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 70px;
@@ -24,57 +21,77 @@
     transition: 0.2s;
     cursor: pointer;
     border-radius: 3px;
-    padding: 10px;
+    padding: 15px;
     min-width: 250px;
-    /* min-height: 300px; */
-    width: 45%; 
+    width: 100%;
     margin: 15px auto;
 }
 .card:hover {
     transform: scale(1.075);
 }
-.profile-image {
-    width: 120px;
-    margin: auto;
+.image {
+    padding: 25px;
+    margin: 0 auto;
 }
-.profile {
-    height: 450px;
+.row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    min-height: 250px;
+} 
+.column {
+    display: inline-block;
 }
 img {
     border-radius: 50%;
     box-shadow: 1px 1px 20px black;
     filter: grayscale(30%);
-    height: 120px;
+    height: 100px;
     margin: auto;
 }
-.title {
-    cursor: pointer;
-    display: block;
+md-card-title, .text {
     text-align: center;
-    color: white;
-    padding: 0;
-    background: #69397B;
-    height: 80px !important;
-    opacity: 0.65;
-}
-.icon {
-    text-align: center;
-}
-.skills {
-    display: inline-block;
-    min-height: 300px;
-}
-.skill-group {
-    text-align: center;
-    width: 100%;
+    width: 100%;      
 }
 .skill {
     display: inline-block;
     background-color: rgba(0,0,0,0.2);
     font-size: 15px;
-    padding: 8px;
+    padding: 6px 12px;
     margin: 8px;
 }
-.social {
-    height: 225px;
+.skill-content {
+    text-align: center;
+}
+.intro {    
+    font-size: 20px;
+    padding: 40px;
+}
+.fill {
+    height: 75%;
+}
+.social-content {
+    display: flex;
+}
+.btns {
+    display: flex;
+    padding: 25px;
+    margin: 0 auto;
+}
+.link {
+  min-width: 25px; 
+  background-color: rgba(0,0,0,0.2);
+  padding: 20px;
+  color: white;
+  font-family: share tech mono;
+  margin: 8px;
+}
+.link:hover {
+  transition: 0.4s;
+  color: black;
+  background: #69397B;
+}
+.fa {
+    font-size: 30px;
 }

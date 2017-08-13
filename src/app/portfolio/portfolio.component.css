@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro|Quicksand|Rajdhani');
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 650px) {
     .container {
         max-height: 1500px;
         flex-wrap: wrap;
@@ -69,7 +69,7 @@
     background: #69397B;
     margin-top: 15px;
     height: 80px;
-    opacity: 0.65;
+    opacity: 0.75;
 }
 img, .img {
     flex-grow: 1;

@@ -11,10 +11,12 @@ import { routerTransition } from '../router.animations';
 export class AboutComponent {
   basic: any;
   skills: string[];
+  social: any;
 
   constructor( public aboutModel: AboutModel ) {
     this.basic = aboutModel.basic;
     this.skills = aboutModel.skills;
+    this.social = aboutModel.social;
   }
   
 }
