@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', ( req, res ) => {
 
-    let server = emailjs.server.connect(  process.env.EMAIL );
+    let server = emailjs.server.connect( process.env.EMAIL );
     
     //send the message and get a callback with an error or details of the message that was sent
 
