@@ -1,4 +1,4 @@
-const config = require('../config/sendgridConfig.js') || process.env.EMAIL;
+// const config = require('../config/sendgridConfig.js');
 const emailjs = require('emailjs');
 const express = require('express');
 const router = express.Router();
@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', ( req, res ) => {
 
-    let server = emailjs.server.connect( config );
+    let server = emailjs.server.connect(  process.env.EMAIL );
     
     //send the message and get a callback with an error or details of the message that was sent
 

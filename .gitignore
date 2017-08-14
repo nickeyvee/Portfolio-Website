@@ -1,7 +1,6 @@
 # Dependences and Setup
 /node_modules
 sendgridConfig.js
-environment.ts
 
 # compiled output
 /dist

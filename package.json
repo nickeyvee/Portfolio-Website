@@ -7,10 +7,10 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng build --aot -prod && node server",
     "build": "ng build",
+    "start": "ng build --aot -prod && node server",
     "serve-build": "ng build && node server",
-    "serve-build-prod": "ng build --aot -prod && node server",
+    "postinstall": "ng build --aot -prod && node server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
