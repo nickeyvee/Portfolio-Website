@@ -6,8 +6,10 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const emailService = require('./server/routes/email-service.js');
 
-
 const app = express();
+
+
+//--- EXPRESS MIDDLEWARE ---
 
 const forceSSL = function() {
   return function ( req, res, next ) {
@@ -19,15 +21,14 @@ const forceSSL = function() {
     next();
   }
 }
-//--- EXPRESS MIDDLEWARE ---
 
-app.set( 'port', ( process.env.PORT || 3000 ));
-app.use( '/sendmail', emailService );
-app.use(express.static( path.join(__dirname, 'dist' )));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(bodyParser.json());
+app.use(bodyParser.json());   // <=== BodyParser MUST be called before emailService route middleware!
+app.set( 'port', ( process.env.PORT || 3000 ));
+app.use( '/sendmail', emailService );
+app.use(express.static( path.join(__dirname, 'dist' )));
 app.use(forceSSL());
 
 app.get('/*', ( req, res ) => {

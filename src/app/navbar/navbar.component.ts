@@ -28,12 +28,10 @@ export class NavComponent implements AfterViewChecked {
     
     ngAfterViewChecked() {
         this.currentRoute = this.router.url;
-        console.log( this.currentRoute );
     }
     
     onClick() {
-        this.currentRoute = this.router.url;
-        console.log( this.currentRoute );        
+        this.currentRoute = this.router.url;     
     }
  
     onRouteChange() {

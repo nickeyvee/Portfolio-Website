@@ -1,4 +1,5 @@
 import { Http, RequestOptions, Headers } from "@angular/http";
+import { DOCUMENT } from '@angular/platform-browser';
 import { AuthService } from "app/auth/auth.service";
 import { Injectable, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
@@ -13,7 +14,11 @@ import 'rxjs/add/operator/map';
 export class DataService {
     postsArr: any[] = [];
 
-    constructor( public router: Router, private auth: AuthService, private http: Http ) { }
+    constructor( 
+        public router: Router, 
+        private auth: AuthService, 
+        private http: Http 
+    ) { }
 
 
     //--- GET BLOG POSTS ON PAGE LOAD ---
@@ -35,7 +40,7 @@ export class DataService {
         // console.log( this.postsArr );
         // posts array
         }), function (errorObject) {
-        console.log("The read failed: " + errorObject.code);
+            console.log("The read failed: " + errorObject.code);
         }
     } 
 
@@ -68,6 +73,7 @@ export class DataService {
     //--- SEND EMAIL ---
 
     sendEmail( firstname: string, phone: string, email: string, comment: string, callback ) {
+
         let commentBody =  {
             "name": firstname,
             "email": email,
@@ -80,7 +86,7 @@ export class DataService {
 
         headers.append('Content-Type', 'application/json');
         
-        this.http.post(`http://localhost:${ port }/sendmail`, commentBody , {headers: headers}).subscribe((data) => {
+        this.http.post(`${ document.location.origin }/sendmail`, commentBody , { headers: headers }).subscribe((data) => {
             if( data.json().success ) {
                 callback( false , 'Sent successfully' );
             } else {

@@ -37,13 +37,13 @@ export class ContactComponent {
 
   onSubmit( ) {
 
-    console.log( this.form );
-    
     let email = this.form.value.email;
     let phone = this.form.value.phone;
     let message = this.form.value.comments;
     let firstName = this.form.value.firstname;
     let subject = this.form.value.subject;
+
+    console.log( email, phone, message, firstName );
 
     let callback = ( err, res ) => {
       if ( err ) {

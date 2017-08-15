@@ -7,9 +7,10 @@ const router = express.Router();
 
 router.post('/', ( req, res ) => {
 
-    let server = emailjs.server.connect( process.env.EMAIL );
+    let server = emailjs.server.connect( process.env.EMAIL || config );
     
     //send the message and get a callback with an error or details of the message that was sent
+    console.log( req );
 
     server.send({
     text:    `You have a message from ${ req.body.name }.`, 
