@@ -76,6 +76,8 @@ md-card-title, .text {
 }
 .btns {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 25px;
     margin: 0 auto;
 }

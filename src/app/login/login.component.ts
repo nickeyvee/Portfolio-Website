@@ -8,12 +8,14 @@ import { FormGroup, FormControl, Validators, FormBuilder }
   selector: 'app-login',
   templateUrl: './login.component.html',
   styles: [`
+  .container-fluid {
+    width: 100%;
+  }
   md-card {
     background-color: rgba(0,0,0,0.2);
     max-width:450px; 
     min-width:285px; 
     margin: auto;
-    margin-bottom: 100px;
   }
   .return {
     background-color: rgba(0,0,0,0.2);

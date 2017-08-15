@@ -7,9 +7,18 @@ const bodyParser = require('body-parser');
 const emailService = require('./server/routes/email-service.js');
 
 
-const app = express();  
+const app = express();
 
-
+const forceSSL = function() {
+  return function ( req, res, next ) {
+    if ( req.headers['x-forwarded-proto'] !== 'https' ) {
+      return res.redirect(
+       ['https://', req.get('Host'), req.url].join('')
+      );
+    }
+    next();
+  }
+}
 //--- EXPRESS MIDDLEWARE ---
 
 app.set( 'port', ( process.env.PORT || 3000 ));
@@ -19,9 +28,9 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(forceSSL());
 
-
-app.get('*', ( req, res ) => {
+app.get('/*', ( req, res ) => {
   res.sendFile( path.join(__dirname, 'dist/index.html') );
 });
 
