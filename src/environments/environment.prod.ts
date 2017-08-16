@@ -7,5 +7,6 @@ export const environment = {
         projectId: "blog-prototype-e9b02",
         storageBucket: "blog-prototype-e9b02.appspot.com",
         messagingSenderId: "794740928368"
-    }
+    },
+    silent: false
 };
