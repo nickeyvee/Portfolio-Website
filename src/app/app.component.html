@@ -1,5 +1,5 @@
 <navi-bar></navi-bar>
-    <div class="container">
+    <div class="container" [@routerTransition]="getState(o)">
         <router-outlet #o="outlet"></router-outlet>
     </div>
  <app-footer ></app-footer>

@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, OnInit, AfterViewChecked } from '@angular/core';
 import { AuthService } from "app/auth/auth.service";
-import { Router, NavigationEnd } from "@angular/router";
+import { Router, NavigationEnd, NavigationStart } from "@angular/router";
 
 @Component({
     selector: 'navi-bar',
@@ -16,13 +16,19 @@ export class NavComponent implements AfterViewChecked {
 
     constructor( public authService: AuthService, public router: Router ) {
         
-        router.events.subscribe(() => {
-            if( this.lastRoute !== router.url ) {
-                this.routeChanged = true;
-                this.lastRoute = router.url;
-            } else {
-                this.routeChanged = false; 
+        router.events.subscribe( event => {
+            if ( event instanceof NavigationStart ) {
+                if( this.lastRoute !== router.url ) {
+                    this.routeChanged = true;
+                    this.lastRoute = router.url;
+                } else {
+                    this.routeChanged = false; 
+                }
             }
+        });
+        
+        router.events.subscribe(() => {
+
         })
     }
     

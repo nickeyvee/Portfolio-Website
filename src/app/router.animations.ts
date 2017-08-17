@@ -8,12 +8,12 @@ export const routerTransition = trigger('routerTransition', [
     group([
       query(':enter', [
         style({ transform: 'translateX( 175% )' }),
-        animate('0.3s ease-in-out', style({ transform: 'translateX( 10% )' }))
+        animate('0.5s ease-in-out', style({ transform: 'translateX( 25% )' }))
       ], { optional: true }),
 
       query(':leave', [
-        style({ transform: 'translateX( -10%)' }),
-        animate('0.3s ease-in-out', style({ transform: 'translateX( -175% )' }))
+        style({ transform: 'translateX( 25%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX( -175% )' }))
       ], { optional: true }),
     ])
   ])
