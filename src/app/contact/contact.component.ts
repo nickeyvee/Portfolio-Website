@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from "app/data.service";
-import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators, FormBuilder }
   from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { DialogComponent } from "app/dialog/dialog.component";
+import { DataService } from "app/data.service";
+import { Router } from "@angular/router";
+import { MdDialog } from "@angular/material";
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +26,8 @@ export class ContactComponent {
   constructor( 
     public dataService: DataService, 
     public router: Router,
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    public dialog: MdDialog
    ) {
     this.form = fb.group({
       firstname: this.firstname,
@@ -50,10 +53,10 @@ export class ContactComponent {
         console.log( res );
       } else {
         console.log( res );
-        this.router.navigate(['about']);
+        this.dialog.open( DialogComponent );
+        this.router.navigate(['about']);  
       }
     }  
     this.dataService.sendEmail( firstName, phone, email, message, callback );
   }
-
 }

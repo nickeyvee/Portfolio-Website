@@ -6,7 +6,7 @@ export class ProjectModel {
         href: "https://shorten2020.herokuapp.com/",
         imgSrc: "https://image.ibb.co/dNLNEv/url_shortener_ss.png",
         name: "Express.Js URL Shortener",
-        description: "A simple URL shortener demo using Express.Js and MongoDB."
+        description: "A URL shortener demo using Express.Js and MongoDB."
     },
     {
         id: "project_1",

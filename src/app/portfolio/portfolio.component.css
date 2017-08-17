@@ -5,6 +5,9 @@
         max-height: 1500px;
         flex-wrap: wrap;
     }
+    .flex-item {
+        width: 310px;
+    }
 }
 .active {
     transition: 0.1s; 
@@ -55,7 +58,7 @@
     border-radius: 3px; 
     font-family: inherit;
     overflow: hidden;
-    width: 310px;
+    /* width: 310px; */
     flex-grow: 1;
     flex-shrink: 1;
     padding: 0;

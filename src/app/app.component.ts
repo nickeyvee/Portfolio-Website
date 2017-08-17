@@ -9,20 +9,7 @@ import { emailjs } from "emailjs/email";
   selector: 'app-root',
   animations: [ routerTransition ],
   templateUrl: './app.component.html',
-  styles: [`
-    .container {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      min-height: 1000px;
-    }
-    main {
-      width: 100%;
-    }
-    router-outlet {
-      width: 100%;
-    }
-  `]
+  styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
   
@@ -32,7 +19,11 @@ export class AppComponent implements OnInit {
     this.dataService.fetchData();
   }
 
+  onRouteChange( el ) {
+    console.log( el.activatedRouteData.state );
+  }
+
   getState( outlet ) {
-    return outlet.activatedRouteData.state;
+      return outlet.activatedRouteData.state;
   }
 }

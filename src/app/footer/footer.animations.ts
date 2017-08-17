@@ -1,7 +1,6 @@
-
 import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 
-export const routerTransition = trigger('routerTransition', [
+export const footerTransition = trigger('footerTransition', [
   transition('* <=> *', [
     query(':enter, :leave', style({ position: 'fixed', width:'65%' }), { optional: true }),
       

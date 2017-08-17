@@ -6,7 +6,7 @@ export class AboutModel {
       title: "Full-Stack Web Developer",
       intro: `
          Hello world! I'm a Full-Stack JavaScript & Front-End Developer from Stuart, Florida.
-         I want to use the skills I'm learning to drive adoption of 
+         I want to use the skills I'm learning to build user-friendly apps that help drive adoption of 
          digital currencies in the marketplace.
       `
    };
