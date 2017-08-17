@@ -7,12 +7,11 @@ import { Router } from "@angular/router";
 @Injectable()
 
 export class AuthService {
-    public currentUser: firebase.User;
-    public errorMSG: string = null;
+    currentUser: firebase.User;
+    errorMSG: string = null;
 
     constructor( public afAuth: AngularFireAuth, public router: Router ) {
        afAuth.authState.subscribe( user => this.currentUser = user ) 
-       //console.log( typeof this.currentUser );
     }
 
     signinUser( email: string, password: string ) {
@@ -27,7 +26,7 @@ export class AuthService {
     logout() {
         this.afAuth.auth.signOut()
             .then( () => {
-                console.log( "User logged out!")
+                // console.log( "User logged out!")
             })
     }
 

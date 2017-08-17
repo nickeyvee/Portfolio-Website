@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    // console.log( window.outerWidth );
     this.dataService.fetchData();
   }
 
@@ -31,6 +32,8 @@ export class AppComponent implements OnInit {
   }
 
   getState( outlet ) {
+    if ( window.outerWidth > 650 ) {
       return outlet.activatedRouteData.state;
+    }
   }
 }

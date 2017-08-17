@@ -17,7 +17,7 @@ export class ProjectModel {
     },
     {
         id: "project_2",
-        href: "https://image.ibb.co/i66mUa/Screenshot_31.png",
+        href: "https://codepen.io/nickey_vee/pen/VPKpNe",
         imgSrc: "http://image.ibb.co/c4QYWF/Screenshot_2017_01_23_at_7_37_44_PM.png",
         name: "Simon Game",
         description: `Clone of the famous 80's memory game, as authentic as the real thing!`

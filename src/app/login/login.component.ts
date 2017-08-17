@@ -42,12 +42,10 @@ export class LoginComponent {
   }
 
   login( ) {
-    console.log( this.form );
-
-    const email = this.form.value.email;
-    const password = this.form.value.password;
-
-    this.authService.signinUser( email, password );
+    this.authService.signinUser( 
+      this.form.value.email, 
+      this.form.value.password 
+    )
   }
 
   cancel() {
