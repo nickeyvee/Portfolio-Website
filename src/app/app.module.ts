@@ -37,6 +37,8 @@ import { PostsComponent } from "app/posts/posts.component";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AdminMenuComponent } from "app/admin/admin-menu/admin-menu.component";
 import { DialogComponent } from './dialog/dialog.component';
+import { ProjectViewComponent } from 'app/project-view/project-view.component';
+import { TicTacToeComponent } from './project-view/tic-tac-toe/tic-tac-toe.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { DialogComponent } from './dialog/dialog.component';
     PostComponent,
     LikeComponent,
     PortfolioComponent,
-    DialogComponent
+    DialogComponent,
+    ProjectViewComponent,
+    TicTacToeComponent
     // AddPostComponent,
     // BlogComponent,    
   ],

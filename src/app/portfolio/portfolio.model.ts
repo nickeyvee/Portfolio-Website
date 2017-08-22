@@ -35,7 +35,8 @@ export class ProjectModel {
         href: "https://codepen.io/nickey_vee/pen/LxEogK",
         imgSrc: "http://image.ibb.co/ipL0BF/Screenshot_2017_01_25_at_8_05_48_PM.png",
         name: "unbeatable tic-tac-toe",
-        description: `A game of Tic-Tac-Toe with an AI opponent. You can only tie!`
+        description: `A game of Tic-Tac-Toe with an AI opponent. You can only tie!`,
+        route: "/tic-tac-toe"
     },
     {
         id: "project_5",
