@@ -12,7 +12,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node server",
+    "start": "forever start server",
+    "stop": "forever stop server",
     "postinstall": "ng build --aot --target=production"
   },
   "private": true,
@@ -39,6 +40,7 @@
     "express": "^4.15.3",
     "firebase": "^4.1.3",
     "ngx-bootstrap": "^1.7.1",
+    "forever": "^0.15.3",
     "rxjs": "^5.1.0",
     "sendgrid": "^5.1.2",
     "typescript": "~2.3.3",

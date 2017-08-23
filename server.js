@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());   // <=== BodyParser MUST be called before emailService route middleware!
-app.set( 'port', ( process.env.PORT || 3000 ));
+app.set( 'port', ( process.env.PORT || 80 ));
 app.use( '/sendmail', emailService );
 app.use(express.static( path.join(__dirname, 'dist' )));
 app.use(forceSSL());
