@@ -1,11 +1,16 @@
-const config = require('../config/sendgridConfig.js');
+const config = {
+    user: "apikey", 
+    password: process.env.PASSWORD,
+    host: "smtp.sendgrid.net",
+    ssl:  true
+};
 const emailjs = require('emailjs');
 const express = require('express');
 const router = express.Router();
 
 // ---ENDPOINT FOR SENDGRID EMAIL SERVICE---
 
-router.post('/', ( req, res ) => {
+router.post('/send', ( req, res ) => {
 
     let server = emailjs.server.connect( config );
     

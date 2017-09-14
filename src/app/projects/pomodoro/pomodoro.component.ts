@@ -157,7 +157,6 @@ export class PomodoroComponent implements OnInit {
    })
 
    $(".start").click(function() {
-      console.log(toggleButton);
       
          $(this).toggleClass("stop-css");
 

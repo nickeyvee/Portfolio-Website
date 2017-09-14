@@ -85,7 +85,7 @@ export class DataService {
 
         headers.append('Content-Type', 'application/json');
         
-        this.http.post(`${ document.location.origin }/sendmail`, commentBody , { headers: headers }).subscribe((data) => {
+        this.http.post(`${ document.location.origin }/mail/send`, commentBody , { headers: headers }).subscribe((data) => {
             if( data.json().success ) {
                 callback( false , 'Sent successfully' );
             } else {
