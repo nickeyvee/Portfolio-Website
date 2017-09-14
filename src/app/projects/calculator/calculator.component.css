@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Rajdhani|Share+Tech+Mono|Source+Code+Pro:300);
+
+.dark {
+  background: #C6C7CB;
+  background: linear-gradient( 180deg, #C6C7CB, #a1a3aa );
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.dark:hover {
+  background: #afb0b6;
+}
+.main {
+  background: linear-gradient( 180deg,#D2D3D7, #c9cacf );
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.main:hover {
+  background: #bbbdc3;
+}
+.right {
+  color: white;
+  /* background: #FA8710; */
+  background: linear-gradient( 180deg, #FA8710, #e17605 );
+  border-bottom: 1px solid black;
+}
+.right:hover {
+  background: #e17605;
+}
+.bottom {
+  border-bottom: none;
+}
+.space {
+  text-align: center;
+}
+.chassis {
+  font-family: Rajdhani;
+  /* box-shadow: 0 15px 100px black; */
+   margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 100px; */
+  /* margin-bottom: 25px; */
+  overflow: none;
+  width: 300px; 
+  padding: 0;  
+}
+.row {
+  margin: 0;
+}
+.top {
+  text-align: right;
+  padding-top: 30px;
+  color: white;
+  width: 100%;
+  height: 120px;
+  background: black;
+  border-bottom: 1px solid black;
+}
+.top div {
+  padding-right: 15px;
+}
+.result {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+input {
+  background: none;
+  font-size: 30px;
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  outline: none;
+}
+a {
+  color: #d9c9e8;
+}
+footer {
+  font-family: share tech mono;
+  font-size: 18px;
+  color: black;
+}
+footer a:hover {
+  text-decoration: none;
+  color: white;
+}
+footer a:active {
+  text-decoration: none;
+  color: white;
+}

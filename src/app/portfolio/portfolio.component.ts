@@ -17,12 +17,18 @@ import { ProjectModel } from './portfolio.model';
     ProjectModel
   ]
 })
-export class PortfolioComponent  {
+export class PortfolioComponent implements OnInit {
 
     projects: any[];
 
     constructor( public projectModel: ProjectModel, public elementRef: ElementRef ) {
       this.projects = projectModel.projects;
+    }
+
+    ngOnInit() {
+       for ( let project of this.projects ) {
+          console.log( project.route );
+       }
     }
 
     toggle( event ) {

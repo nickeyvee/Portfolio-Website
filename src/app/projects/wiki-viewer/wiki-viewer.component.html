@@ -1,0 +1,25 @@
+
+<head>
+<meta charset="UTF-8">
+<title>Free Code Camp Wiki Viewer</title>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<md-card class="body" >
+   <h1 class="heading">Wikipedia Viewer</h1>
+   <div id="menu">
+      <a class="btn" target="_blank"
+         href="https://en.wikipedia.org/wiki/Special:Random">Click here for a Random Article</a>
+      <input class="search" type="text" #search placeholder="Search..." (keydown.enter)="onSubmit( search.value )">
+   </div>
+   <!-- <ul id="results"></ul> -->
+   <a class="flex-item" *ngFor="let result of results" 
+      target="_blank" href="{{ result.url }}">
+      <h3>{{ result.name }}</h3>
+      <p>{{ result.description }}</p>
+   </a>
+<!-- <md-paginator></md-paginator> -->
+</md-card>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>

@@ -6,8 +6,13 @@ import { LoginComponent } from "app/login/login.component";
 import { AdminComponent } from "app/admin/admin.component";
 import { AuthGuard } from "app/auth/auth-guard.service";
 import { PortfolioComponent } from "app/portfolio/portfolio.component";
-import { ProjectViewComponent } from 'app/project-view/project-view.component';
-import { TicTacToeComponent } from './app/project-view/tic-tac-toe/tic-tac-toe.component';
+import { ProjectsComponent } from 'app/projects/projects.component';
+import { TicTacToeComponent } from './app/projects/tic-tac-toe/tic-tac-toe.component';
+import { WikiViewerComponent } from "app/projects/wiki-viewer/wiki-viewer.component";
+import { SimonGameComponent } from "app/projects/simon-game/simon-game.component";
+import { CalculatorComponent } from "app/projects/calculator/calculator.component";
+import { QuoteGenComponent } from "app/projects/quote-gen/quote-gen.component";
+import { PomodoroComponent } from "app/projects/pomodoro/pomodoro.component";
 
 // import { AddPostComponent } from "app/admin/add-post/add-post.component";
 // import { BlogComponent } from "app/blog/blog.component";
@@ -19,19 +24,16 @@ const appRoutes = [
   { path: "contact", component: ContactComponent, data: { state: "contact" } },
   { path: "login", component: LoginComponent, data: { state: "login" } },
   { path: "portfolio", component: PortfolioComponent, data: { state: "portfolio" } },
-  { path: "project", component: ProjectViewComponent, data: { state: "project" }, children: [
-     { path: "tic-tac-toe", component: TicTacToeComponent }
+  { path: "project", component: ProjectsComponent, data: { state: "project" }, children: [
+     { path: "tic-tac-toe", component: TicTacToeComponent },
+     { path: "wiki-viewer", component: WikiViewerComponent },
+     { path: "simon-game", component: SimonGameComponent },
+     { path: "calculator", component: CalculatorComponent },
+     { path: "quote-gen", component: QuoteGenComponent },
+     { path: "pomodoro", component: PomodoroComponent }
   ] }
   // { path: "admin/new", component: AddPostComponent, canActivate: [ AuthGuard ] },
   // { path: "blog", component: BlogComponent },
 ]
 
-// @NgModule({
-//     imports: [ RouterModule.forRoot( appRoutes ) ],
-//     exports: [ RouterModule ]
-// })
-// export class AppRoutingModule { }
-
-export const AppRoutingModule = RouterModule.forRoot( appRoutes, { 
-//   useHash: true
-});
+export const AppRoutingModule = RouterModule.forRoot( appRoutes );

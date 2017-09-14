@@ -10,8 +10,15 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MD_PLACEHOLDER_GLOBAL_OPTIONS, MdInputModule, MdCardModule, MdIconModule, MdSelectModule, MdDialog, MdDialogModule } 
-  from '@angular/material';
+import { 
+   MdButtonModule, 
+   MdCheckboxModule, 
+   MD_PLACEHOLDER_GLOBAL_OPTIONS, 
+   MdInputModule, 
+   MdCardModule, MdIconModule, 
+   MdSelectModule, MdDialog, 
+   MdDialogModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from "./navbar/navbar.component";
@@ -22,8 +29,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
-// import { AddPostComponent } from './admin/add-post/add-post.component'
-// import { BlogComponent } from './blog/blog.component';
 
 import { DataService } from "app/data.service";
 import { AuthService } from "app/auth/auth.service";
@@ -31,14 +36,16 @@ import { AuthService } from "app/auth/auth.service";
 import { environment } from "environments/environment";
 import { AuthGuard } from "app/auth/auth-guard.service";
 
-import { LikeComponent } from "app/posts/like.component";
-import { PostComponent } from "app/posts/post.component";
-import { PostsComponent } from "app/posts/posts.component";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AdminMenuComponent } from "app/admin/admin-menu/admin-menu.component";
 import { DialogComponent } from './dialog/dialog.component';
-import { ProjectViewComponent } from 'app/project-view/project-view.component';
-import { TicTacToeComponent } from './project-view/tic-tac-toe/tic-tac-toe.component';
+import { ProjectsComponent } from 'app/projects/projects.component';
+import { TicTacToeComponent } from './projects/tic-tac-toe/tic-tac-toe.component';
+import { WikiViewerComponent } from './projects/wiki-viewer/wiki-viewer.component';
+import { SimonGameComponent } from './projects/simon-game/simon-game.component';
+import { CalculatorComponent } from './projects/calculator/calculator.component';
+import { PomodoroComponent } from './projects/pomodoro/pomodoro.component';
+import { QuoteGenComponent } from './projects/quote-gen/quote-gen.component';
 
 
 @NgModule({
@@ -52,15 +59,15 @@ import { TicTacToeComponent } from './project-view/tic-tac-toe/tic-tac-toe.compo
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    PostsComponent,
-    PostComponent,
-    LikeComponent,
     PortfolioComponent,
     DialogComponent,
-    ProjectViewComponent,
-    TicTacToeComponent
-    // AddPostComponent,
-    // BlogComponent,    
+    ProjectsComponent,
+    TicTacToeComponent,
+    WikiViewerComponent,
+    SimonGameComponent,
+    CalculatorComponent,
+    PomodoroComponent,
+    QuoteGenComponent
   ],
   imports: [
     MdDialogModule,

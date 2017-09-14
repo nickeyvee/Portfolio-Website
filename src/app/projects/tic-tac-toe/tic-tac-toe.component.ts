@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Inject, Injectable, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import * as $ from 'jquery';
 
@@ -12,9 +12,6 @@ export class TicTacToeComponent implements OnInit {
 
   constructor( @Inject(DOCUMENT) private document: any ) {}
 
-//   ngAfterViewInit() {
-    // Component views have been checked
-//   }
   ngOnInit() {
 
    // $(".box").addClass("avoid-clicks");

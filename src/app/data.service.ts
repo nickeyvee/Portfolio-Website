@@ -1,11 +1,10 @@
 import { Http, RequestOptions, Headers } from "@angular/http";
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { AuthService } from "app/auth/auth.service";
 import { Injectable, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { emailjs } from "emailjs/email";
 import * as firebase from 'firebase';
-import { Post } from './model/post.model';
 import 'rxjs/add/operator/map';
 
 
