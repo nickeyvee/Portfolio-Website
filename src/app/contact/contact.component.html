@@ -14,11 +14,12 @@
           <input mdInput placeholder="Email" formControlName="email">
           <md-error *ngIf="!form.controls.email.valid && form.controls.email.touched">
             Email is <strong>required</strong>
-          </md-error>   
+          </md-error>
         </md-input-container>
 
         <md-input-container>
-          <input mdInput placeholder="Phone Number" formControlName="phone">
+          <input mdInput placeholder="Phone Number" formControlName="phone" type="tel" pattern="/[0-9]|\(|\)\-|\s/g {16}" required
+          value="{{ parsed }}" (keypress)="parsePhoneNumber($event)" maxlength="16">
           <md-error *ngIf="!form.controls.phone.valid && form.controls.phone.touched">
             Phone number is <strong>required</strong>
           </md-error>  
