@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Rajdhani|Share+Tech+Mono|Source+Code+Pro:300);
+
+.calculator-body .dark {
+  background: #C6C7CB;
+  background: linear-gradient( 180deg, #C6C7CB, #a1a3aa );
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.calculator-body .dark:hover {
+  background: #afb0b6;
+}
+.calculator-body .main {
+  background: linear-gradient( 180deg,#D2D3D7, #c9cacf );
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.calculator-body .main:hover {
+  background: #bbbdc3;
+}
+.calculator-body .main:active {
+   background: #e4e4e7;
+}
+.calculator-body .dark:active {
+   background: #e4e4e7;   
+}
+.calculator-body .right {
+  color: white;
+  background: linear-gradient( 180deg, #FA8710, #e17605 );
+  border-bottom: 1px solid black;
+}
+.calculator-body .right:hover {
+  background: #e17605;
+}
+.calculator-body .right:active {
+   background: #fb9c37;  
+}
+.calculator-body .bottom {
+  border-bottom: none;
+}
+.calculator-body .space {
+  text-align: center;
+}
+.calculator-body {
+  font-family: Rajdhani;
+  box-shadow: 5px 5px 100px #0d0d0d;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 50px auto;
+  width: 300px; 
+  padding: 0;  
+}
+.calculator-body .row {
+  margin: 0;
+}
+.calculator-body .top {
+  text-align: right;
+  padding-top: 30px;
+  color: white;
+  width: 100%;
+  height: 120px;
+  background: black;
+  border-bottom: 1px solid black;
+}
+.calculator-body .top div {
+  padding-right: 15px;
+}
+.calculator-body .result {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+.calculator-body input {
+  background: none;
+  font-size: 30px;
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  outline: none;
+}
+.calculator-body a {
+  color: #d9c9e8;
+}
+.calculator-body footer {
+  font-family: share tech mono;
+  font-size: 18px;
+  color: black;
+}
+.calculator-body footer a:hover {
+  text-decoration: none;
+  color: white;
+}
+.calculator-body footer a:active {
+  text-decoration: none;
+  color: white;
+}

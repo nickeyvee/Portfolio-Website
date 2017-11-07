@@ -1,0 +1,84 @@
+@import url( https://fonts.googleapis.com/css?family=Asap|Fira+Mono|Titillium+Web );
+
+.wiki-viewer-body {
+  font-family: asap;
+  position: relative;
+  overflow: auto;
+  background: #3B5998;
+  height: 750px;
+  padding-top: 75px;
+  text-align: center;
+  min-width: 450px;
+  opacity: 0.5s;
+  z-index: 1;  
+}
+
+.wiki-viewer-body .heading {
+  color: white;
+  padding-bottom: 5px;
+  font-size: 50px;
+}
+
+.wiki-viewer-body .wiki-button {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 15px;
+}
+
+.wiki-viewer-body .wiki-search {
+  display:table;
+  float: none;
+  margin: 0 auto;
+  width: 300px;  
+  font-size: 15px;
+  padding: 12px;
+  outline: none;
+  table-layout: fixed;
+  border-radius: 2px; 
+  margin-bottom: 25px;
+  background: white;
+  border: solid 3px #f0f5f5;   
+  transition: border 0.3s;
+}
+
+.wiki-viewer-body .search::-webkit-input-placeholder {
+  font-family: monospace;
+  color: #24355b;
+}
+
+.wiki-viewer-body .search:focus {
+  color: white;
+  background: #3B5998;
+  font-size: 20px;
+  width: 450px;
+  border: solid 3px #24355b;
+  box-shadow: 4px 4px 15px #344a7f;
+  transition: 0.2s;
+}
+
+.wiki-viewer-body .search:blur {
+  transition: 0.09s;
+}
+
+.wiki-viewer-body .flex-item {
+  margin: auto;   
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  display: block;
+  text-align: left;
+  background-color: #d2e0e0;
+  border-left: 25px solid #384A72;     
+  padding: 20px 20px 35px 20px;
+  list-style: none;
+  margin-bottom: 20px;
+  max-width: 70%;
+  z-index: 3;
+}
+
+.wiki-viewer-body .flex-item:hover {
+  background-color: #f0f5f5;
+  border-left: 25px solid #24355b;  
+}

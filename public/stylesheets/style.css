@@ -1,0 +1,156 @@
+html {
+   overflow-x: hidden;
+   position: relative;
+   z-index: 40;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   color: black;
+}
+
+body {
+   /* animation: BackgroundGradient 32s ease infinite; */
+   overflow-x: hidden;
+   position: relative;
+   display: block;
+   height: 100%;
+   width: 100%;
+   z-index: 50;
+   padding: 0;
+   margin: 0;
+}
+
+body .top-section {
+   position: relative;
+   font: 24px "Roboto";
+   background: linear-gradient( 50deg, #052042, #4d0028);
+   background-size: 100% 200%;
+   padding: 35px 0 35px 0;
+   height: 650px;
+   width: 100%;
+   z-index: 60;
+}
+
+img.header {
+   padding-left: 25px;
+   display: inline-block;
+   height: 65px;
+   margin: auto;
+   padding: 0;
+}
+
+img.portrait {
+   display: block;
+   border-radius: 50%;
+   height: 80px;
+   margin: auto;
+}
+
+nav {
+   margin-bottom: 50px;
+}
+
+nav .nav-wrapper {
+   background-color: transparent;
+   background: none;
+}
+
+div.section-2 {
+   position: relative;
+   z-index: 1;
+}
+
+div.content-wrapper {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   background: white;
+   min-height: 625px;
+}
+
+div.project.card {
+   cursor: pointer;
+}
+
+div.project.card:hover {
+   box-shadow: 5px 5px 15px grey;
+}
+
+.selectorClass a {
+   position: relative;
+   z-index: 70;
+}
+
+.invalid {
+   border-bottom: 1px solid red;
+ }
+
+.page-footer .btn-floating {
+   margin: 15px 5px 0 5px;
+}
+
+#sidenav-overlay {
+   z-index: 50 !important;
+}
+
+@media(min-width: 600px) {
+   #nav_mobile {
+      display: none;
+   }
+   nav .nav-wrapper {
+      padding: 0 25px 0 25px;
+   }
+   img.header {
+      padding-left: 20px;
+   }
+   div.top-section {
+      height: 100%;
+   }
+   div.card-content {
+      /* height: 300px; */
+   }
+   div.card-image {
+      /* max-height: 180px; */
+      /* overflow: hidden; */
+   }
+}
+
+@media(max-width: 600px) {
+   div.portfolio.table {
+      display: none;
+   }
+}
+
+@keyframes BackgroundGradient {
+   0% {
+      background-position: 0% 50%
+   }
+   50% {
+      background-position: 100% 50%
+   }
+   100% {
+      background-position: 0% 50%
+   }
+}
+
+.progress {
+   position: fixed;
+   display: block;
+   border-radius: unset;
+   padding: 0;
+   margin: 0;
+   z-index: 99;
+   top: 0;
+   left: 0;
+}
+
+.hidden {
+   overflow: hidden;
+   display: none;
+}
+
+/* div.toast {
+   background: red;
+} */

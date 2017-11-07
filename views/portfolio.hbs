@@ -1,0 +1,102 @@
+<style>
+   .portfolio.table {
+      display: table;
+      /* Allow the centering to work */
+      margin: 0 auto;
+   }
+
+   ul.paginate {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding: 0;
+   }
+
+   li.item {
+      display: inline-block;
+      width: 125px;
+   }
+
+   li.item span {
+      height: 8px;
+      background: grey;
+      display: block;
+   }
+
+   li.item button {
+      font-family: 'Roboto';
+      background: white;
+      font-size: 15px;
+      padding: 10px;
+      display: block;
+      border: none;
+      width: 100%;
+   }
+
+   li.item button:hover {
+      color: #f50057;
+   }
+
+   span.highlight {
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 125px;
+      height: 8px;
+      box-sizing: border-box;
+      background-color: #f50057;
+   }
+</style>
+<div class="content-wrapper">
+   {{!-- <div class="portfolio table">
+      <ul class="paginate">
+         <span class="highlight"></span>
+         <li class="item">
+            <span></span>
+            <button>All</button>
+         </li>
+         <li class="item">
+            <span></span>
+            <button>Front-End</button>
+         </li>
+         <li class="item">
+            <span></span>
+            <button>Utilites</button>
+         </li>
+      </ul>
+   </div> --}}
+   <div id="itemContainer" class="container">
+      <div class="row">
+         {{#each project}}
+         <div class="selectorClass col s12 m4">
+            <a href="portfolio/{{ _id }}">
+               <div class="project card white">
+                  <div class="card-image">
+                     <img src="{{ imgSrc }}">
+                  </div>
+                  <div class="card-content">
+                     <span class="card-title">{{ name }}</span>
+                     <p>{{ description }}</p>
+                  </div>
+               </div>
+            </a>
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+{{!-- <Script>
+   $(document).ready(function () {
+      const $highlight = $('span.highlight');
+      const right = $('span.highlight').offset().right;  // Get the calculated left position
+      console.log(right);
+
+
+      $('ul.paginate').click(function (el) {
+         $highlight.css({ right: right })  // Set the right to its calculated position
+            .animate({ "right": "0px" }, "slow");
+      })
+   });
+</Script> --}}

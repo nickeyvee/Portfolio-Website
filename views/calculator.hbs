@@ -1,0 +1,47 @@
+<head>
+   <meta charset="UTF-8">
+   <title>JavaScript Calculator</title>
+   {{!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> --}}
+   <link rel="stylesheet" href="/stylesheets/calculator.css">
+</head>
+
+<div class="calculator-body">
+   <div class="top">
+      <div class="result"></div>
+      <div class="memory"></div>
+   </div>
+   <div class="allButtons">
+      <div class="row">
+         <input type="button" value="C" class="col m3 s3 clear dark">
+         <input type="button" value="+/-" class="col m3 s3 plusMinus dark">
+         <input type="button" value=" % " class="col m3 s3 percent dark">
+         <input type="button" value=" / " class="col m3 s3 operator right">
+      </div>
+      <div class="row">
+         <input type="button" value="7" class="col m3 s3 number main">
+         <input type="button" value="8" class="col m3 s3 number main">
+         <input type="button" value="9" class="col m3 s3 number main">
+         <input type="button" value=" * " class="col m3 s3 operator right">
+      </div>
+      <div class="row">
+         <input type="button" value="4" class="col m3 s3 number main">
+         <input type="button" value="5" class="col m3 s3 number main">
+         <input type="button" value="6" class="col m3 s3 number main">
+         <input type="button" value=" - " class="col m3 s3 operator right">
+      </div>
+      <div class="row">
+         <input type="button" value="1" class="col m3 s3 number main">
+         <input type="button" value="2" class="col m3 s3 number main">
+         <input type="button" value="3" class="col m3 s3 number main">
+         <input type="button" value=" + " class="col m3 s3 operator right">
+      </div>
+      <div class="row">
+         <input type="button" value="0" class="col m6 s6 number main bottom">
+         <input type="button" value="." class="col m3 s3 decimal main bottom">
+         <input type="button" value=" = " class="col m3 s3 equals right bottom">
+      </div>
+   </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="/js/calculator.js"></script>

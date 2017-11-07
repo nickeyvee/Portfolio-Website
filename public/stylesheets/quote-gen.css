@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed|Pathway+Gothic+One|Mogra|Yatra+One);
+.content-wrapper {
+  background-size: 100%;
+  padding-top: 50px;
+  min-height: 605px;
+  /* background-color: #FF5252 !important; */
+  background-attachment: fixed;
+  text-align: center;
+}
+.quote-gen-body .heading{
+  color: white;
+}
+.quote-gen-body {
+   font-family: roboto condensed;
+   opacity: 0.9;
+   background: white;
+   border-radius: 25px;
+   padding: 35px;
+   margin: 50px auto;
+   width: 450px;
+   overflow: hidden;
+   min-height: 250px;
+}
+.quote-gen-body h1{
+  font-family: roboto condensed;
+  font-size: 50px
+}
+.quote-gen-body .fa-quote-right{
+  font-size: 45px;
+}
+.quote-gen-body .quote{
+  text-align: center;
+  margin-top: 25px;
+  font-size: 25px;
+  overflow: hidden;
+  line-height: 150%;
+}
+.quote-gen-body .author{
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  font-size: 25px !important;
+}
+.quote-gen-body .quote-button{
+  background: black;
+  color: white;
+  border-radius: 7px;
+  margin-top: 20px;
+  padding: 7px 33px;
+  font-family: oswald;
+  font-size: 38px;
+  border: 3px solid black;
+  float: left;
+}
+.quote-gen-body .get-quote{
+  float: right;
+}
+/* .quote-gen-body .twitter-btn:hover {
+  background: #333333;
+  color: white;
+  border: 3px solid #333333;
+} */
+.quote-gen-body .get-quote:hover {
+  background: #333333;
+  color: white;
+  border: 3px solid #333333;
+}
+.quote-gen-body .get-quote:focus{
+  outline:none;
+}
+.quote-gen-body .signature{
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 50px;
+  font-family: mogra;
+  font-size: 30px;
+}
