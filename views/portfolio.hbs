@@ -47,9 +47,19 @@
       box-sizing: border-box;
       background-color: #f50057;
    }
+
+   .masonry-layout {
+      column-count: 3;
+      column-gap: 3;
+   }
+
+   .selectorClass {
+      break-inside: avoid;
+   }
 </style>
 <div class="content-wrapper">
-   {{!-- <div class="portfolio table">
+   {{!--
+   <div class="portfolio table">
       <ul class="paginate">
          <span class="highlight"></span>
          <li class="item">
@@ -66,28 +76,26 @@
          </li>
       </ul>
    </div> --}}
-   <div id="itemContainer" class="container">
-      <div class="row">
-         {{#each project}}
-         <div class="selectorClass col s12 m4">
-            <a href="portfolio/{{ _id }}">
-               <div class="project card white">
-                  <div class="card-image">
-                     <img src="{{ imgSrc }}">
-                  </div>
-                  <div class="card-content">
-                     <span class="card-title">{{ name }}</span>
-                     <p>{{ description }}</p>
-                  </div>
+   <div class="container masonry-layout">
+      {{#each project}}
+      <div class="selectorClass">
+         <a href="portfolio/{{ _id }}">
+            <div class="project card white">
+               <div class="card-image">
+                  <img src="{{ imgSrc }}">
                </div>
-            </a>
-         </div>
-         {{/each}}
+               <div class="card-content">
+                  <span class="card-title">{{ name }}</span>
+                  <p>{{ description }}</p>
+               </div>
+            </div>
+         </a>
       </div>
+      {{/each}}
    </div>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-{{!-- <Script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> {{!--
+<Script>
    $(document).ready(function () {
       const $highlight = $('span.highlight');
       const right = $('span.highlight').offset().right;  // Get the calculated left position

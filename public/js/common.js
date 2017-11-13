@@ -9,13 +9,13 @@ $(document).ready(function () {
    // var msnry = new Masonry(container, {                          <=== vanilla
    //    itemSelector: '.selectorClass'
    // });
-   container.masonry({
-      itemSelector: '.selectorClass'
-   });
+   // container.masonry({
+   //    itemSelector: '.selectorClass'
+   // });
 
-   container.imagesLoaded().progress(function () {
-      container.masonry('layout');
-   });
+   // container.imagesLoaded().progress(function () {
+   //    container.masonry('layout');
+   // });
 
    $('.selectorClass a').click(function (el) {
       setTimeout(function () {

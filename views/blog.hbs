@@ -6,14 +6,14 @@
             <div class="col s12 m10 offset-m1">
                <div class="card" style="position: relative; overflow: hidden;">
                   <div class="card-image">
-                     <img class="responsive-img blog_images" style="opacity: 0;" src="{{ metadata.header_image.imgix_url }}">
+                     <img class="responsive-img blog_images" style="opacity: 0;" src="{{ imgFeature }}">
                   </div>
                   <div class="card-content">
                      <h3 class="">{{ title }}</h3>
                      <span class="card-title">Created by
-                        <strong class="yellow-text text-darken-2">{{ metadata.author }}</strong> on {{ friendly_date }}</span>
+                        <strong class="yellow-text text-darken-2">{{ author }}</strong> on {{ friendly_date }}</span>
                      <div style="">
-                        {{{ metadata.teaser }}}
+                        {{ subtitle }}
                      </div>
                   </div>
                   <div class="card-action">

@@ -20,7 +20,8 @@ describe("test entry point (top.js)", function () {
    //    console.log("running something before each test");
    // });
 
-   importTest("repo-service", './repo-service.spec.js');
+   // importTest("repo-service", './repo-service.spec.js');
+   importTest('medium-service', './medium-service.spec.js');
    // importTest("more unit tests...", './path-to-spec.js');
 
    after(function () {

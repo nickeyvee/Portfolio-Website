@@ -10,7 +10,7 @@ const index = require('./routes/index');
 const contact = require('./routes/contact');
 const portfolio = require('./routes/portfolio');
 const webhooks = require('./routes/webhooks');
-const blog = require('./routes/blog');
+const blog = require('./routes/blog-medium');
 
 const app = express();
 
